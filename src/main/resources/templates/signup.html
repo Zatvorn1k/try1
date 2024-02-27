@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Регистрация</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745; /* зеленый цвет */
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838; /* темно-зеленый цвет при наведении */
+        }
+
+    </style>
+</head>
+<body>
+    <form th:action="@{/signup}" method="post">
+        <input type="text" name="username" placeholder="Имя пользователя">
+        <input type="text" name="name" placeholder="Имя" >
+        <input type="text" name="surname" placeholder="Фамилия">
+        <input type="text" name="lastname" placeholder="Отчество">
+        <input type="text" name="phoneNum" placeholder="Номер Телефона">
+        <input type="text" name="email" placeholder="Имаил">
+        <input type="text" name="password" placeholder="Пароль">
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+</body>
+</html>
